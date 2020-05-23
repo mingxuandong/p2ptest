@@ -31,4 +31,4 @@ server.on('listening',()=>{
 }).on('error',(err)=>{
     console.log(err,'server-error')
 })
-server.listen(7520, 'localhost')
+server.listen(7520, '127.0.0.1')

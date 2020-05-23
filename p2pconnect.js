@@ -5,7 +5,7 @@ const linkList = {}
 const connectHelperServer = net.createConnection(
     {
         port:7520,
-        remoteAddress:'192.168.0.168'
+        host:'106.13.54.145'
     },
     ()=>{
         console.log('connected-helper-server') 
