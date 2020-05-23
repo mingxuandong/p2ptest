@@ -27,7 +27,7 @@ const server = net.createServer((socket)=>{
     // }
 })
 server.on('listening',()=>{
-    console.log('server启动')
+    console.log('server启动', server.address().port, server.address().address)
 }).on('error',(err)=>{
     console.log(err,'server-error')
 })
