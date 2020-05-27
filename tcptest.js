@@ -1,7 +1,21 @@
 const net = require('net')
-
-let client = net.createConnection(11768, 'localhost',()=>{
-    client.write('连上了')
+const process = require('process')
+let client = net.createConnection({
+    port: 7520,
+    host:'106.13.54.145',
+    localPort: 5300
+},()=>{
+    client.write('clientServerReady')
+    // try {
+        // process.send({},null,null,(error)=>{
+        //     console.log(error)
+        // })
+    // } catch (error) {
+    //     console.log(error)
+    // }
+    
 }).on('error',(e)=>{
     console.log(e)
+}).on('data',(buffer)=>{
+    console.log(buffer.toString())
 })
