@@ -3,9 +3,7 @@ const puppeteer = require('puppeteer')
 async function run(account, password) {
     try {
         
-    } catch (error) {
-        
-    }
+    
     const browser = await puppeteer.launch({
         headless: false,
         defaultViewport: {width:1366,height:768}
@@ -56,4 +54,7 @@ async function run(account, password) {
     })
     await browser.close();
     return result;
+    } catch (error) {
+        console.log(error)
+    }
 }
